@@ -12,10 +12,10 @@ let score = 0
 const scoreboard = document.querySelector('.scoreboard')
     // grid
 const grid = document.querySelector('.grid')
-const width = 10
+const width = 20
 let squares = []
     // snake
-let currentSnake = [13,12,11]
+let currentSnake = [185,184,183]
 let direction = 1
     // apple
 let appleIndex = 0
@@ -100,7 +100,7 @@ function handleStartGame() {
     currentSnake.forEach( i => squares[i].classList.remove('snake') )
     squares[appleIndex].classList.remove('apple')
     // reset values + scoreboard + apple
-    currentSnake = [13,12,11]
+    currentSnake = [185,184,183]
     direction = 1
     speed = 1000
     score = 0
