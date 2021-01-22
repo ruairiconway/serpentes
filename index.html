@@ -6,26 +6,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Serpentes</title>
+        <!-- TYPESTYLES -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
         <!-- CSS -->
-        <!-- Normalize --><link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css">
-        <!-- Main --><link href="main.css" rel="stylesheet" type="text/css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css"><!-- Normalize -->
+        <link href="main.css" rel="stylesheet" type="text/css"><!-- Main -->
     </head>
     <body>
-        <header>
-            <h1>serpentes</h1>
-            <button class="start">start / reset</button>
-            <h2>score: <span class="scoreboard">0</span></h2>
+        <header class="header">
+            <div class="title">
+                <h1>serpentes</h1>
+            </div>
+            <div class="console-info">
+                <button class="btn start">start</button>
+                <p class="score">pts. <span class="scoreboard">0</span></p>
+            </div>
         </header>
 
-        <main>
+        <main class="game-container">
             <div class="grid"></div>
         </main>
-        
-        <footer>
-            <button class="btn btn-left">left</button>
-            <button class="btn btn-up">up</button>
-            <button class="btn btn-down">down</button>
-            <button class="btn btn-right">right</button>
+
+        <footer class="console-btns">
+            <button class="btn btn-left"><p class="btn-arrow btn-arrow-left">&#9650;</p></button>
+            <div class="console-btns-center">
+                <button class="btn btn-up"><p class="btn-arrow btn-arrow-up">&#9650;
+                </p></button>
+                <button class="btn btn-down"><p class="btn-arrow btn-arrow-down">&#9660;
+                </p></button>
+            </div>
+            <button class="btn btn-right"><p class="btn-arrow btn-arrow-right">&#9650;</p></button>
         </footer>
 
         <!-- scripts -->
