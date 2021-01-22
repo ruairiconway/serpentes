@@ -1,21 +1,33 @@
 .grid {
     display: flex;
     flex-flow: row wrap;
-    width: 200px;
-    height: 200px;
-    border: solid 2px black;
+
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+    background: #9BC702;
 }
 
 .square {
-    background: blue;
-    width: 20px;
-    height: 20px;
+    width: 10%;
+    height: 0;
+    padding-bottom: 10%;
 }
 
 .snake {
-    background: green;
+    background: #000;
 }
 
 .apple {
     background: red;
+    border-radius: 100%;
+}
+
+
+@media screen and (min-width: 770px) {
+
+    .btn {
+        display: none;
+    }
+
 }
