@@ -2,38 +2,57 @@
 
 // ==== VARIABLES
 
-// start
-const startButton = document.querySelector('.start')
+    // start
+const startBtn = document.querySelector('.start')
 let speed = 1000
 let modifier = 0.9
 let speedId = 0
-// score
+    // score
 let score = 0
 const scoreboard = document.querySelector('.scoreboard')
-// grid
+    // grid
 const grid = document.querySelector('.grid')
 const width = 10
 let squares = []
-// snake
+    // snake
 let currentSnake = [2,1,0]
 let direction = 1
-// apple
+    // apple
 let appleIndex = 0
+    // direction buttons
+const btnUp = document.querySelector('.btn-up')
+const btnRight = document.querySelector('.btn-right')
+const btnDown = document.querySelector('.btn-down')
+const btnLeft = document.querySelector('.btn-left')
 
 
 // ==== HANDLE
 
-function handleSnakeControl(e) {
+    // directions
+function directionUp() { direction = -width }
+function directionRight() { direction = 1 }
+function directionDown() { direction = width }
+function directionLeft() { direction = -1 }
+
+function handleSnakeKeyControl(e) {
     // change direction on keydown
     if (e.keyCode === 38) { // up
-        direction = -width
+        directionUp()
     } else if (e.keyCode === 39) { // right
-        direction = 1
+        directionRight()
     } else if (e.keyCode === 40) { // down
-        direction = width
+        directionDown()
     } else if (e.keyCode === 37) { // left
-        direction = -1
+        directionLeft()
     }
+}
+
+function handleSnakeBtnControl() {
+    // change direction on button
+    btnUp.addEventListener('click', directionUp)
+    btnRight.addEventListener('click', directionRight)
+    btnDown.addEventListener('click', directionDown)
+    btnLeft.addEventListener('click', directionLeft)
 }
 
 function handleEatApple(tail) {
@@ -93,7 +112,6 @@ function handleStartGame() {
 }
 
 
-
 // ==== GENERATE 
 
 function generateGrid() {
@@ -129,8 +147,9 @@ function generateApple() {
 // ==== WATCH
 
 function watchStart() {
-    document.addEventListener('keydown', handleSnakeControl)
-    startButton.addEventListener('click', handleStartGame)
+    document.addEventListener('keydown', handleSnakeKeyControl)
+    handleSnakeBtnControl()
+    startBtn.addEventListener('click', handleStartGame)
 }
 
 
