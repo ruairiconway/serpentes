@@ -1,17 +1,126 @@
+/* ==== STRUCTURE ==== */
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    height: 100vh;
+}
+
+.header {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 10px 0;
+}
+
+.title h1 {
+    font-family: 'Press Start 2P', sans-serif;
+    
+
+    margin: 0;
+}
+
+.console-info {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 190px;
+    margin: 0 auto;
+}
+
+.score {
+    margin: 0;
+    padding: 10px 15px;
+}
+
+.game-container {
+    padding: 0 10px;
+}
+
+.console-btns {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 15px;
+}
+
+.console-btns-center {  
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.btn {
+    padding: 10px 15px;
+    background: #fff;
+    border: 3px solid #000;
+    box-shadow: 4px 4px #000, 6px 7px #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: 2px 2px #000;
+}
+
+.btn-up {
+    margin-bottom: 10px;
+}
+
+.btn-left {
+    margin-right: 10px;
+}
+
+.btn-right {
+    margin-left: 10px;
+}
+
+
+.btn-arrow {
+    font-size: 1.25em;
+    margin: 0;
+}
+
+.btn-arrow-left {
+    transform: rotate(-90deg);
+}
+
+.btn-arrow-right {
+    transform: rotate(90deg);
+}
+
+
+/* ==== SNAKE GAME ==== */
+
 .grid {
     display: flex;
     flex-flow: row wrap;
 
-    margin: 0 auto;
-    width: 400px;
-    height: 400px;
+    margin: auto;
+    max-width: 420px;
+    max-height: 420px;
     background: #9BC702;
+    border: 3px solid #000;
+    box-shadow: 4px 4px #000, 6px 7px #fff;
 }
 
 .square {
-    width: 10%;
+    /* 20 per row // matches var 'width' in main.js */
+    width: 5%;
     height: 0;
-    padding-bottom: 10%;
+    padding-bottom: 5%;
 }
 
 .snake {
@@ -20,13 +129,14 @@
 
 .apple {
     background: red;
-    border-radius: 100%;
 }
 
 
+/* ==== DESKTOP MEDIA QUERY ==== */
+
 @media screen and (min-width: 770px) {
 
-    .btn {
+    .console-btns {
         display: none;
     }
 
