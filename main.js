@@ -4,7 +4,7 @@
 
     // start
 const startBtn = document.querySelector('.start')
-let speed = 1000
+let speed = 750
 let modifier = 0.9
 let speedId = 0
     // score
@@ -14,6 +14,7 @@ const scoreboard = document.querySelector('.scoreboard')
 const grid = document.querySelector('.grid')
 const width = 20
 let squares = []
+const gameOver = document.querySelector('.game-over')
     // snake
 let currentSnake = [185,184,183]
 let direction = 1
@@ -72,7 +73,7 @@ function handleEatApple(tail) {
 }
 
 function handleSnakeMove() {
-    // stop movement if snake hits
+    // stop movement and show 'game over' if snake hits
     if (
         (currentSnake[0] - width < 0 && direction === -width) || // top
         (currentSnake[0] % width === width-1 && direction === 1) || // right
@@ -80,6 +81,7 @@ function handleSnakeMove() {
         (currentSnake[0] % width === 0 && direction === -1) || // left
         squares[currentSnake[0] + direction].classList.contains('snake') // self
     ) {
+        gameOver.classList.remove('game-over-hidden')
         return clearInterval(speedId)
     }
     // snake motion, remove tail add new head
@@ -96,13 +98,14 @@ function handleSnakeMove() {
 function handleStartGame() {
     // clear interval
     clearInterval(speedId)
-    // remove snake + apple
+    // remove snake + apple + gameOver
+    gameOver.classList.add('game-over-hidden')
     currentSnake.forEach( i => squares[i].classList.remove('snake') )
     squares[appleIndex].classList.remove('apple')
     // reset values + scoreboard + apple
     currentSnake = [185,184,183]
     direction = 1
-    speed = 1000
+    speed = 750
     score = 0
     scoreboard.textContent = score
     generateApple()

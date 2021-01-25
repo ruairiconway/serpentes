@@ -24,7 +24,6 @@ body {
 .title h1 {
     font-family: 'Press Start 2P', sans-serif;
     
-
     margin: 0;
 }
 
@@ -45,6 +44,7 @@ body {
 
 .game-container {
     padding: 0 10px;
+    position: relative;
 }
 
 .console-btns {
@@ -65,7 +65,7 @@ body {
     padding: 10px 15px;
     background: #fff;
     border: 3px solid #000;
-    box-shadow: 4px 4px #000, 6px 7px #fff;
+    box-shadow: 4px 4px #000;
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -113,7 +113,7 @@ body {
     max-height: 420px;
     background: #9BC702;
     border: 3px solid #000;
-    box-shadow: 4px 4px #000, 6px 7px #fff;
+    box-shadow: 4px 4px #000;
 }
 
 .square {
@@ -125,10 +125,31 @@ body {
 
 .snake {
     background: #000;
+    box-shadow: 2px 2px #7A9B02;
 }
 
 .apple {
     background: red;
+    box-shadow: 2px 2px #7A9B02;
+}
+
+.game-over {
+    font-family: 'Press Start 2P', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    z-index: 1;
+    text-shadow: 2px 2px #7A9B02;
+}
+
+.game-over-text {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.game-over-hidden {
+    display: none;
 }
 
 
