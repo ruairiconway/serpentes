@@ -25,6 +25,8 @@ const btnUp = document.querySelector('.btn-up')
 const btnRight = document.querySelector('.btn-right')
 const btnDown = document.querySelector('.btn-down')
 const btnLeft = document.querySelector('.btn-left')
+    // copyright
+const copyrightYear = document.querySelector('.copyright-year')
 
 
 // ==== HANDLE
@@ -117,6 +119,11 @@ function handleStartGame() {
 
 // ==== GENERATE 
 
+function generateYear() {
+    // generate year for copyright sign-off
+    copyrightYear.textContent = new Date().getFullYear()
+}
+
 function generateGrid() {
     // generate grid
     for (let i = 0; i < width*width; i++) {
@@ -158,6 +165,7 @@ function watchStart() {
 
 // ==== ON LOAD
 
+generateYear()
 generateGrid()
 generateSnake()
 watchStart()
