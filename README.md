@@ -17,6 +17,5 @@ A build of the game Snake using pure html, css, and vanilla js.
 - Game ends when snake hits wall or self.
 
 ## Future Edits
-- Add game over screen when snake hits wall or self.
 - Add prompts on desktop to show how to play i.e. 'use keyboard arrows'.
-- Tweak responsiveness so it displays on single page.
+- display arrow buttons on desktop for accessibility.
