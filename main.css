@@ -6,40 +6,19 @@ body {
     text-transform: uppercase;
 
     height: 100vh;
+    background: #A3A3A3;
 }
 
-.header {
-    padding: 5px;
-    margin-bottom: 10px;
-}
 
 .title {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    margin: 10px 0;
-}
-
-.title h1 {
     font-family: 'Press Start 2P', sans-serif;
-    
     margin: 0;
-}
-
-.console-info {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-
-    width: 190px;
-    margin: 0 auto;
-}
-
-.score {
-    margin: 0;
-    padding: 10px 15px;
+    padding: 15px 10px;
+    text-shadow: 4px 4px #fff;
 }
 
 .game-container {
@@ -47,13 +26,36 @@ body {
     position: relative;
 }
 
+.console-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+
+    margin: 0 auto;
+    padding: 15px 10px;
+    max-width: 420px;
+}
+
+.console-info {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.score {
+    margin: 0;
+    padding: 10px 15px;
+    background: #9BC702;
+    border: 3px solid #000;
+    border-bottom: none;
+    box-shadow: 4px 4px #000;
+}
+
 .console-btns {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-
-    margin-top: 15px;
 }
 
 .console-btns-center {  
@@ -87,9 +89,8 @@ body {
     margin-left: 10px;
 }
 
-
 .btn-arrow {
-    font-size: 1.25em;
+    font-size: 1.5em;
     margin: 0;
 }
 

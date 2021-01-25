@@ -15,13 +15,7 @@
     </head>
     <body>
         <header class="header">
-            <div class="title">
-                <h1>serpentes</h1>
-            </div>
-            <div class="console-info">
-                <button class="btn start">start</button>
-                <p class="score">pts. <span class="scoreboard">0</span></p>
-            </div>
+            <h1 class="title">serpentes</h1>
         </header>
 
         <main class="game-container">
@@ -32,16 +26,22 @@
             </div>
         </main>
 
-        <footer class="console-btns">
-            <button class="btn btn-left"><p class="btn-arrow btn-arrow-left">&#9650;</p></button>
-            <div class="console-btns-center">
-                <button class="btn btn-up"><p class="btn-arrow btn-arrow-up">&#9650;
-                </p></button>
-                <button class="btn btn-down"><p class="btn-arrow btn-arrow-down">&#9660;
-                </p></button>
+        <div class="console-container">    
+            <div class="console-info">
+                <p class="score">pts. <span class="scoreboard">0</span></p>
+                <button class="btn start">start</button>
             </div>
-            <button class="btn btn-right"><p class="btn-arrow btn-arrow-right">&#9650;</p></button>
-        </footer>
+            <div class="console-btns">
+                <button class="btn btn-left"><p class="btn-arrow btn-arrow-left">&#9650;</p></button>
+                <div class="console-btns-center">
+                    <button class="btn btn-up"><p class="btn-arrow btn-arrow-up">&#9650;
+                    </p></button>
+                    <button class="btn btn-down"><p class="btn-arrow btn-arrow-down">&#9660;
+                    </p></button>
+                </div>
+                <button class="btn btn-right"><p class="btn-arrow btn-arrow-right">&#9650;</p></button>
+            </div>
+        </div>
 
         <!-- scripts -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>
