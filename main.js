@@ -4,8 +4,8 @@
 
     // start
 const startBtn = document.querySelector('.start')
-let speed = 750
-let modifier = 0.9
+let speed = 500
+let modifier = 0.75
 let speedId = 0
     // score
 let score = 0
@@ -105,7 +105,7 @@ function handleStartGame() {
     // reset values + scoreboard + apple
     currentSnake = [185,184,183]
     direction = 1
-    speed = 750
+    speed = 500
     score = 0
     scoreboard.textContent = score
     generateApple()
