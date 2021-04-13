@@ -9,6 +9,8 @@ A build of the game Snake using pure html, css, and vanilla js.
 - Live - https://ruairiconway.github.io/serpentes/
 - Code - https://github.com/ruairiconway/serpentes
 
+| ![Image](./assets/start.png) | ![Image](./assets/in-progress.png) | ![Image](./assets/end.png) |
+
 ## Points of interest
 - Snake can be controlled using arrow keys or buttons.
 - Buttons appear on mobile.
